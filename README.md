@@ -1,5 +1,4 @@
-# Schumacker2019 Scientific Data
-Schumacker et al., 2019 Scientific Data manuscript
+# Schumacker et al., 2019 Scientific Data manuscript
 
 This repository contains code used for quality control and data analysis presented in: 
 
