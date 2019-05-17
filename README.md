@@ -1,6 +1,5 @@
-# Schumacker2019_PLOS_Comp_Bio
-Schumacker et al., 2019 PLOS Computational Biology manuscript
-# Enkera-Marcello-scidata2018-Celegans-rnaseq-diet
+# Schumacker2019 Scientific Data
+Schumacker et al., 2019 Scientific Data manuscript
 
 This repository contains code used for quality control and data analysis presented in: 
 
