@@ -2,7 +2,7 @@
 
 This repository contains code used for quality control and data analysis presented in: 
 
-> **Schumacker ST, Coppage KR, Enke RA. RNA Sequencing Analysis of the Human Retina and Associated Ocular Tissues. Scientific Data 2019.**
+> **Schumacker ST, Coppage KR, Enke RA. RNA Sequencing Analysis of the Human Retina and Associated Ocular Tissues. Scientific Data 2019 (in prep).**
 
 ----
 
