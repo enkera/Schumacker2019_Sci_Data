@@ -28,4 +28,4 @@ Walkthroughs and code used for all of the quality assessment and data analysis s
 2. [Sequence trimming with Trimmomatic](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/blob/master/Walkthroughs/Trimmomatic-Instructions)
 3. [Quality Analysis summary with MultiQC](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/blob/master/Walkthroughs/MultiQC-Instructions)
 3. [Quantitation with kallisto](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/blob/master/Walkthroughs/Kallisto-Instructions)
-4. [Normalization, visualization, and differential expression analysis with sleuth]()
+4. [Normalization, visualization, and differential expression analysis with sleuth](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/tree/master/R)
