@@ -16,7 +16,7 @@ Data is available in NCBI SRA under the accession number (https:).
 | --- | --- | --- |
 | Trimmomatic | 0.36 | http://www.usadellab.org/cms/?page=trimmomatic  |
 | FastQC | 0.11.5 | http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ |
-| kallisto | 0.42.3 | https://pachterlab.github.io/kallisto/ |
+| Kallisto | 0.42.3 | https://pachterlab.github.io/kallisto/ |
 | MultiQC | 1.7 | https://multiqc.info|
 | Sleuth | - | https://pachterlab.github.io/sleuth/ |
 
