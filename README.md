@@ -25,7 +25,7 @@ Data is available in NCBI SRA under the accession number (https:).
 Walkthroughs and code used for all of the quality assessment and data analysis steps are available in each of the below links.
 
 1. [Quality assessment with FastQC](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/blob/master/Walkthroughs/FastQC-Instructions)
-2. [Sequence trimming with Trimmomatic]()
+2. [Sequence trimming with Trimmomatic](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/blob/master/Walkthroughs/Trimmomatic-Instructions)
 3. [Quality Analysis summary with MultiQC]()
 3. [Quantitation with kallisto](https://github.com/ScottSchumacker/Schumacker2019_Sci_Data/blob/master/Walkthroughs/Kallisto-Instructions)
 4. [Normalization, visualization, and differential expression analysis with sleuth]()
