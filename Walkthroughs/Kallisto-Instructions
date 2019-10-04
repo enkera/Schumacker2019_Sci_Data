@@ -1,4 +1,11 @@
 # Instructions for Kallisto
 
+1. In Cyverse Discovery Environment, load Kallisto Index.
+2. Name the analysis and select the appropriate output folder.
+3. Create your Index by using the appropriate transcriptome FASTA file.
+4. Load Kallisto Quant.
+5. Name the analysis and select the appropriate output folder.
+6. Import your index and fastq files, run Kallisto Quant.
+
 Kallisto Quant settings:
 Number of bootstrap samples = 100
