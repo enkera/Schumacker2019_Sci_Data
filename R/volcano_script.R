@@ -1,58 +1,69 @@
-# Script for creating volcano plot
-# Create Cutom Volcano:
+# R script for creating volcano plot from Kallisto/Sleuth outputs
+
+# Install and load data visualization packages
 install.packages("dplyr")
 library(dplyr)
+
+install.packages("ggplot2")
 library(ggplot2)
+
+install.packages("cowplot")
 library(cowplot)
+
+install.packages("ggrepel")
 library(ggrepel)
 
 # Load in sleuth .csv data
-inputData <- read.csv(file="/Users/ScottSchumacker/Desktop/SciDataPaper/ScientificData/totalData.csv", 
+inputData <- read.csv(file="", 
                  header=TRUE, sep=",")
 
+# Return the result
 View(inputData)
-# mutating the data to tell which points are significant
+
+# Mutate the data to identify which points are significant with q-val < 0.05
 inputData <- mutate(inputData, sig=ifelse(inputData$qval<0.05, "FDR < 0.05", "Not Significant"))
 
+# Return the result
 View(inputData)
-# search for genes of interest and retrieve their index number
+
+# Search for genes of interest and retrieve their index number
 View(inputData$target_id)
 
-# Assigning gene variable names
-RHO = inputData$Gene_Name[4989]
-PDE6A = inputData$Gene_Name[4041]
-CNGA1 = inputData$Gene_Name[3667]
-CNGB3 = inputData$Gene_Name[29401]
-GNGT1 = inputData$Gene_Name[2211]
-GUCA1A = inputData$Gene_Name[3131]
-GUCA1B = inputData$Gene_Name[1845]
-GUCY2D = inputData$Gene_Name[1824]
-GUCY2F = inputData$Gene_Name[6613]
-GNB1 = inputData$Gene_Name[1407]
-SAG = inputData$Gene_Name[3522]
-SLC24A1 = inputData$Gene_Name[2123]
-NR2E3 = inputData$Gene_Name[3270]
-CRX = inputData$Gene_Name[1064]
-ENST00000226193.5 = inputData$target_id[1216]
+# For speific genes labels but not specific transcripts:
+# Assign gene variable names
+RHO = inputData$Gene_Name[]
+PDE6A = inputData$Gene_Name[]
+CNGA1 = inputData$Gene_Name[]
+CNGB3 = inputData$Gene_Name[]
+GNGT1 = inputData$Gene_Name[]
+GUCA1A = inputData$Gene_Name[]
+GUCA1B = inputData$Gene_Name[]
+GUCY2D = inputData$Gene_Name[]
+GUCY2F = inputData$Gene_Name[]
+GNB1 = inputData$Gene_Name[]
+SAG = inputData$Gene_Name[]
+SLC24A1 = inputData$Gene_Name[]
+NR2E3 = inputData$Gene_Name[]
+CRX = inputData$Gene_Name[]
 
-ENST00000255622.10 = inputData$target_id[1143]
+# For specific transcript labels:
+ENST00000226193.5 = inputData$target_id[]
 
-ENST00000560550.1 = inputData$target_id[566]
+ENST00000255622.10 = inputData$target_id[]
 
-ENST00000467787.1 = inputData$target_id[2189]
+ENST00000560550.1 = inputData$target_id[]
 
+ENST00000467787.1 = inputData$target_id[]
 
-
-
-
-# Creating the volcano plot variable
+# Create bold text elements
 boldVolcTextPlot <- element_text(face = "bold", color = "black", size = 19)
 boldVolcTextAxis <- element_text(face = "bold", color = "black", size = 13)
 
-
+# Addeing bold text theme
 customPlot <- customPlot + theme(text = boldVolcTextPlot)
 customPlot <- customPlot + theme(axis.text = boldVolcTextAxis)
 
+# Creating custom plot
 customPlot = ggplot(inputData, aes(b, -log10(qval))) + geom_point(aes(x=b, y=-log10(qval), 
                                                         color = ifelse(-log10(qval)>-log10(0.05), "Statistically Significant", "no")), size=1.5)
 
@@ -66,7 +77,7 @@ customPlot <- customPlot + geom_vline(xintercept=c(-1.5, 1.5), linetype="dashed"
 customPlot <- customPlot + geom_hline(yintercept=c(1.30), linetype="dashed")
 customPlot
 
-# Labeling the gene names
+# Label the gene/transcript names
 customPlot <- customPlot + geom_label_repel(aes(x=b, y = -log10(qval), 
                               label = ifelse(
                                   
@@ -84,5 +95,5 @@ customPlot <- customPlot + geom_label_repel(aes(x=b, y = -log10(qval),
                           color = "black", fontface = "bold", size=3, segment.size = 0.1, box.padding = unit(0.5, "lines"))
 
 
-# Plot
+# Return the custom volcano plot
 customPlot
