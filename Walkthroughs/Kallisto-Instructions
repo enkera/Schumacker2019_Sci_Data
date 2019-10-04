@@ -1,1 +1,4 @@
 # Instructions for Kallisto
+
+Kallisto Quant settings:
+Number of bootstrap samples = 100
