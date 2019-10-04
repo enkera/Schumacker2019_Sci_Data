@@ -1,1 +1,7 @@
 # Instructions for Trimmomatic
+
+Trimmomatic settings:
+SLIDINGWINDOW:4:20 
+LEADING:20   
+TRAILING:20 
+MINLEN:50
