@@ -1,5 +1,9 @@
 # Instructions for Trimmomatic
 
+1. In Cyverse Discovery Environment load Trimmomatic.
+2. Name the analysis and select the appropriate output folder.
+3. In settings, choose paired end, upload your folder of sequencing files and upload your trimmer settings .txt file.
+
 Trimmomatic settings:
 SLIDINGWINDOW:4:20 
 LEADING:20   
