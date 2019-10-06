@@ -65,7 +65,7 @@ listMarts()
 
 # Choose which mart to use. Insert mart of choice betwwen quotation marks
 # For this project, "ENSEMBL_MART_ENSEMBL
-ensembl = useMart("ENSEMBL_MART_ENSEMBL")
+ensembl <- useMart("ENSEMBL_MART_ENSEMBL")
 
 # List datasets within mart of choice to see which one you want/need
 listDatasets(ensembl)
@@ -114,7 +114,7 @@ boldTextAxis <- element_text(face = "bold", color = "black", size = 19)
 plot_pca(so, color_by = 'tissue', point_size = 7)
 
 # Plot with labels
-PCA = plot_pca(so, color_by = 'tissue', text_labels = TRUE)
+PCA <- plot_pca(so, color_by = 'tissue', text_labels = TRUE)
 
 # Assign the PCA plot to the variable 'PCA'
 PCA <- plot_pca(so, color_by = 'tissue', point_size = 7)

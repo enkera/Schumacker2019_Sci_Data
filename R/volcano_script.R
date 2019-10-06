@@ -13,11 +13,11 @@ library(cowplot)
 install.packages("ggrepel")
 library(ggrepel)
 
-# Load in sleuth .csv data
-inputData <- read.csv(file="", 
+# Load in sleuth .csv data results
+inputData <- read.csv(file="/Users/ScottSchumacker/Desktop/SciDataPaper/ScientificData/totalData.csv", 
                  header=TRUE, sep=",")
 
-# Return the result
+# Return the results
 View(inputData)
 
 # Mutate the data to identify which points are significant with q-val < 0.05
@@ -26,21 +26,29 @@ inputData <- mutate(inputData, sig=ifelse(inputData$qval<0.05, "FDR < 0.05", "No
 # Return the result
 View(inputData)
 
-# Search for genes of interest and retrieve their index number
+# Search for transcripts of interest and retrieve their index number
 View(inputData$target_id)
 
-# For speific genes labels but not specific transcripts:
-# For specific transcript labels, ENST is transcript id and target_id[] is its
-# corresponding index
+# For gene labels, 'ENST' is transcript_id name and 
+# target_id[] is it's corresponding index number
 
-# transcripts used in this example: 
-ENST00000226193.5 = inputData$target_id[]
+# Genes used in this example:
+# NRL, RCVRN, PDE6B, RHO, GUCY2F, GNAT1
 
-ENST00000255622.10 = inputData$target_id[]
+# RCVRN
+ENST00000226193.5 <- inputData$target_id[1216]
 
-ENST00000560550.1 = inputData$target_id[]
+# PDE6B
+ENST00000255622.10 <- inputData$target_id[1143]
 
-ENST00000467787.1 = inputData$target_id[]
+# NRL
+ENST00000560550.1 <- inputData$target_id[566]
+
+# GNAT
+ENST00000467787.1 <- inputData$target_id[2189]
+
+# RHO
+ENST00000296271.3 <- inputData$target_id[4989]
 
 # Create bold text elements
 boldVolcTextPlot <- element_text(face = "bold", color = "black", size = 19)
@@ -51,7 +59,7 @@ customPlot <- customPlot + theme(text = boldVolcTextPlot)
 customPlot <- customPlot + theme(axis.text = boldVolcTextAxis)
 
 # Creating custom plot
-customPlot = ggplot(inputData, aes(b, -log10(qval))) + geom_point(aes(x=b, y=-log10(qval), 
+customPlot <- ggplot(inputData, aes(b, -log10(qval))) + geom_point(aes(x=b, y=-log10(qval), 
                                                         color = ifelse(-log10(qval)>-log10(0.05), "Statistically Significant", "no")), size=1.5)
 
 customPlot <- customPlot + geom_point(aes(x=b, y = -log10(qval), color = ifelse(b < -1.5 & -log10(qval) > -log10(0.05) | b > 1.5 & -log10(qval) > -log10(0.05), "Biologically and Statistically Significant" , NA)))
@@ -78,7 +86,7 @@ customPlot <- customPlot + geom_label_repel(aes(x=b, y = -log10(qval),
                                           
                                         inputData$target_id == ENST00000560550.1, "NRL", ifelse(
                                           
-                                                    inputData$Gene_Name == RHO, "RHO", NA))))))), 
+                                                    inputData$target_id == ENST00000296271.3, "RHO", NA))))))), 
                           color = "black", fontface = "bold", size=3, segment.size = 0.1, box.padding = unit(0.5, "lines"))
 
 
