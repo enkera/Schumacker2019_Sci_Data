@@ -36,19 +36,19 @@ View(inputData$target_id)
 # NRL, RCVRN, PDE6B, RHO, GUCY2F, GNAT1
 
 # RCVRN
-ENST00000226193.5 <- inputData$target_id[1216]
+ENST00000226193.5 <- inputData$target_id[] # Enter index of transcript of choice
 
 # PDE6B
-ENST00000255622.10 <- inputData$target_id[1143]
+ENST00000255622.10 <- inputData$target_id[]
 
 # NRL
-ENST00000560550.1 <- inputData$target_id[566]
+ENST00000560550.1 <- inputData$target_id[]
 
 # GNAT
-ENST00000467787.1 <- inputData$target_id[2189]
+ENST00000467787.1 <- inputData$target_id[]
 
 # RHO
-ENST00000296271.3 <- inputData$target_id[4989]
+ENST00000296271.3 <- inputData$target_id[]
 
 # Create bold text elements
 boldVolcTextPlot <- element_text(face = "bold", color = "black", size = 19)
