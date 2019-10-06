@@ -30,23 +30,10 @@ View(inputData)
 View(inputData$target_id)
 
 # For speific genes labels but not specific transcripts:
-# Assign gene variable names
-RHO = inputData$Gene_Name[]
-PDE6A = inputData$Gene_Name[]
-CNGA1 = inputData$Gene_Name[]
-CNGB3 = inputData$Gene_Name[]
-GNGT1 = inputData$Gene_Name[]
-GUCA1A = inputData$Gene_Name[]
-GUCA1B = inputData$Gene_Name[]
-GUCY2D = inputData$Gene_Name[]
-GUCY2F = inputData$Gene_Name[]
-GNB1 = inputData$Gene_Name[]
-SAG = inputData$Gene_Name[]
-SLC24A1 = inputData$Gene_Name[]
-NR2E3 = inputData$Gene_Name[]
-CRX = inputData$Gene_Name[]
+# For specific transcript labels, ENST is transcript id and target_id[] is its
+# corresponding index
 
-# For specific transcript labels:
+# transcripts used in this example: 
 ENST00000226193.5 = inputData$target_id[]
 
 ENST00000255622.10 = inputData$target_id[]
